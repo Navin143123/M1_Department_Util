@@ -26,7 +26,7 @@ char department_type(char dtype)
             trousers=250;
             inners=100;
         }
-        if(gender=='F'||gemder=='T')
+        if(gender=='F'||gender=='T')
         {
             float chudidar,saree,legin,roughdress,inners;
             chudidar=300;
@@ -94,7 +94,7 @@ char customer_type(char ctype)
 }
 char customer_data(char name, int mobno)
 {
-    char arr[1000]={""}
+    char arr[1000]={"swe"};
     
 }
 
