@@ -6,7 +6,7 @@ int customer_data();
 struct billing{
 float bill;
 char gender,name;
-int mobno;
+int mobno,fmobno,mmobno;
 }s1;
 int department_type(int dtypeno[],int n)
 {
@@ -260,15 +260,14 @@ int department_type(int dtypeno[],int n)
             }
 
     }
-    }
+  }
     return s1.bill;
 }
 int customer_data()
 {
     if(s1.gender=='M'){
-    char mname[10]={"Jagdish","Mukesh","Satesh","Karthick","Sanjay"};
-    int  mmobno[10]={9748777348,7877598437,78998032110,9365668083,9748980976};
-    if(s1.name==mname||s1.mobno==mmobno)
+    s1.mmobno={9748777348,7877598437,78998032110,9365668083,9748980976};
+    if(s1.mobno==s1.mmobno)
     {
         return 1;
     }
@@ -278,9 +277,8 @@ int customer_data()
     }
     if(s1.gender=='F'||s1.gender=='T')
     {
-    char fname[10]={"Sharu","Monisha","Swathi","Lakshmi","Saraswathi"};
-    int fmobno[10]={9545554516,7885363457,9853487565,74358877220,9785673423};
-    if(s1.name==fname||s1.mobno==fmobno)
+    s1.fmobno={9545554516,7885363457,9853487565,74358877220,9785673423};
+    if(s1.mobno==s1.fmobno)
     {
         return 1;
     }
