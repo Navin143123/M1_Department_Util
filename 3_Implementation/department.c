@@ -1,17 +1,19 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-char department_type(char dtype);
-char customer_data(char name, int mobno,char gender);
+int department_type(int dtypeno[],int n);
+int customer_data();
 struct billing{
 float bill;
-};
-int department_type(int dtypeno[],char gender,int n)
+char gender,name;
+int mobno;
+}s1;
+int department_type(int dtypeno[],int n)
 {
     for(int i=0;i<n;i++){
     if(dtypeno[i]==1)
     {
-        if(gender=='M')
+        if(s1.gender=='M')
         {
             int n1;
             float tshirt,shirt,pant,trousers,inners;
@@ -32,28 +34,28 @@ int department_type(int dtypeno[],char gender,int n)
                 scanf("%d\n",&q[i]);
                 if(mcloth[i]==1)
                 {
-                    bill=bill+tshirt*q[i];
+                    s1.bill=s1.bill+tshirt*q[i];
                 }
                 if(mcloth[i]==2)
                 {
-                    bill=bill+shirt*q[i];
+                    s1.bill=s1.bill+shirt*q[i];
                 }
                 if(mcloth[i]==3)
                 {
-                    bill=bill+pant*q[i];
+                    s1.bill=s1.bill+pant*q[i];
                 }
                 if(mcloth[i]==4)
                 {
-                    bill=bill+trousers*q[i];
+                   s1.bill=s1.bill+trousers*q[i];
                 }
                 if(mcloth[i]==5)
                 {
-                    bill=bill+inners*q[i];
+                    s1.bill=s1.bill+inners*q[i];
                 }
             }
             
         }
-        if(gender=='F'||gender=='T')
+        if(s1.gender=='F'||s1.gender=='T')
         {
             float chudidar,saree,legin,roughdress,inners;
             int n2;
@@ -74,23 +76,23 @@ int department_type(int dtypeno[],char gender,int n)
                 scanf("%d\n",&q1[i]);
                 if(fcloth[i]==1)
                 {
-                    bill=bill+chudidar*q1[i];
+                    s1.bill=s1.bill+chudidar*q1[i];
                 }
                 if(fcloth[i]==2)
                 {
-                    bill=bil+saree*q1[i];
+                   s1.bill=s1.bill+saree*q1[i];
                 }
                 if(fcloth[i]==3)
                 {
-                    bill=bill+legin*q1[i];
+                    s1.bill=s1.bill+legin*q1[i];
                 }
                 if(fcloth[i]==4)
                 {
-                    bill=bill+roughdress*q1[i];
+                    s1.bill=s1.bill+roughdress*q1[i];
                 }
                 if(fcloth[i]==5)
                 {
-                    bill=bill+inners*q1[i];
+                    s1.bill=s1.bill+inners*q1[i];
                 }
             }
         }
@@ -98,7 +100,7 @@ int department_type(int dtypeno[],char gender,int n)
     if(dtypeno[i]==2)
     {
         float facewash,powder,cream,gel,perfume;
-        if(gender=='M')
+        if(s1.gender=='M')
         {
             float gel,perfume;
             int n3;
@@ -119,27 +121,27 @@ int department_type(int dtypeno[],char gender,int n)
                 scanf("%d\n",&q2[i]);
                 if(mcos[i]==1)
                 {
-                    bill=bill+facewash*q2[i];
+                    s1.bill=s1.bill+facewash*q2[i];
                 }
                 if(mcos[i]==2)
                 {
-                    bill=bil+powder*q2[i];
+                    s1.bill=s1.bill+powder*q2[i];
                 }
                 if(mcos[i]==3)
                 {
-                    bill=bill+cream*q2[i];
+                    s1.bill=s1.bill+cream*q2[i];
                 }
                 if(mcos[i]==4)
                 {
-                    bill=bill+gel*q2[i];
+                    s1.bill=s1.bill+gel*q2[i];
                 }
                 if(mcos[i]==5)
                 {
-                    bill=bill+perfume*q2[i];
+                    s1.bill=s1.bill+perfume*q2[i];
                 }
             }
         }
-        if(gender=='F'||gender=='T')
+        if(s1.gender=='F'||s1.gender=='T')
         {
             float lipstick;
             int n4;
@@ -152,7 +154,7 @@ int department_type(int dtypeno[],char gender,int n)
             printf("Enter number of items you decided to buy\n");
             scanf("%d",&n4);
             int fcos[n4],q3[n4];
-            for(int i=0;i<n2;i++)
+            for(int i=0;i<n4;i++)
             {
                 printf("Please choose the itemno of which item you like to buy\n");
                 scanf("%d\n",&fcos[i]);
@@ -160,23 +162,23 @@ int department_type(int dtypeno[],char gender,int n)
                 scanf("%d\n",&q3[i]);
                 if(fcos[i]==1)
                 {
-                    bill=bill+facewash*q3[i];
+                    s1.bill=s1.bill+facewash*q3[i];
                 }
                 if(fcos[i]==2)
                 {
-                    bill=bil+powder*q3[i];
+                    s1.bill=s1.bill+powder*q3[i];
                 }
                 if(fcos[i]==3)
                 {
-                    bill=bill+cream*q3[i];
+                    s1.bill=s1.bill+cream*q3[i];
                 }
                 if(fcos[i]==4)
                 {
-                    bill=bill+lipstick*q3[i];
+                    s1.bill=s1.bill+lipstick*q3[i];
                 }
                 if(fcos[i]==5)
                 {
-                    bill=bill+perfume*q3[i];
+                    s1.bill=s1.bill+perfume*q3[i];
                 }
             }
         }
@@ -184,6 +186,7 @@ int department_type(int dtypeno[],char gender,int n)
     if(dtypeno[i]==3)
     {
         float toys,books,sports,electronics;
+        int n5;
         toys=300;
         books=150;
         sports=400;
@@ -200,25 +203,26 @@ int department_type(int dtypeno[],char gender,int n)
                 scanf("%d\n",&q4[i]);
                 if(happ[i]==1)
                 {
-                    bill=bill+toys*q4[i];
+                   s1.bill=s1.bill+toys*q4[i];
                 }
                 if(happ[i]==2)
                 {
-                    bill=bil+books*q4[i];
+                    s1.bill=s1.bill+books*q4[i];
                 }
                 if(happ[i]==3)
                 {
-                    bill=bill+sports*q4[i];
+                    s1.bill=s1.bill+sports*q4[i];
                 }
                 if(happ[i]==4)
                 {
-                    bill=bill+electronics*q4[i];
+                    s1.bill=s1.bill+electronics*q4[i];
                 }
             }
     }
     if(dtypeno[i]==4)
     {
         float sugar,rice,dhal,salt,oil;
+        int n6;
         sugar=40;
         salt=30;
         rice=50;
@@ -235,82 +239,83 @@ int department_type(int dtypeno[],char gender,int n)
                 scanf("%d\n",&q5[i]);
                 if(grcy[i]==1)
                 {
-                    bill=bill+sugar*q5[i];
+                    s1.bill=s1.bill+sugar*q5[i];
                 }
                 if(grcy[i]==2)
                 {
-                    bill=bil+rice*q5[i];
+                    s1.bill=s1.bill+rice*q5[i];
                 }
                 if(grcy[i]==3)
                 {
-                    bill=bill+dhal*q5[i];
+                    s1.bill=s1.bill+dhal*q5[i];
                 }
                 if(grcy[i]==4)
                 {
-                    bill=bill+salt*q5[i];
+                    s1.bill=s1.bill+salt*q5[i];
                 }
                 if(grcy[i]==5)
                 {
-                    bill=bill+oil*q5[i];
+                   s1.bill=s1.bill+oil*q5[i];
                 }
             }
 
     }
     }
-    return bill;
+    return s1.bill;
 }
-char customer_data(char name, int mobno,char gender)
+int customer_data()
 {
-    if(gender=='M'){
+    if(s1.gender=='M'){
     char mname[10]={"Jagdish","Mukesh","Satesh","Karthick","Sanjay"};
     int  mmobno[10]={9748777348,7877598437,78998032110,9365668083,9748980976};
-    if(name==mname||mobno==mmobno)
+    if(s1.name==mname||s1.mobno==mmobno)
     {
-        return "Existing customer"
+        return 1;
     }
     else{
-        return "New customer";
+        return 0;
     }
     }
-    if(gender=='F'|| gender=='T')
+    if(s1.gender=='F'||s1.gender=='T')
     {
     char fname[10]={"Sharu","Monisha","Swathi","Lakshmi","Saraswathi"};
     int fmobno[10]={9545554516,7885363457,9853487565,74358877220,9785673423};
-    if(name==fname||mobno==fmobno)
+    if(s1.name==fname||s1.mobno==fmobno)
     {
-        return "Existing customer"
+        return 1;
     }
     else{
-        return "New customer";
+        return 0;
+    }
     }
     
 }
 int main()
 {
-    int mobno,dtypeno[5],bill,n;
+    int dtypeno[5],n,value;
     char name,gender,valuedtype;
     printf("Please enter your name:\n");
-    scanf("%s",name);
-    printf("Please enter your name:\n")
-    scanf("%d",&mobno);
+    scanf("%s",s1.name);
+    printf("Please enter your name:\n");
+    scanf("%d",&s1.mobno);
     printf("Please enter the gender(M/F/T):\n");
-    scanf("%c",&gender);
-    printf("Please choose the departmentno where you like to buy:\n")
+    scanf("%c",&s1.gender);
+    printf("Please choose the departmentno where you like to buy:\n");
     printf("1-clothing\n2-cosmetics\n3-homeapp\n4-grocery\n");
     printf("Enter how many departments you are going to buy\n");
     scanf("%d",&n);
     for(int i=0;i<n;i++){
     scanf("%d",&dtypeno[i]);}
-    bill=department_type(dtypeno,gender,n);
-    value=customer_data(name,mobno,gender);
-    if(value=="Existing customer")
+    s1.bill=department_type(dtypeno,n);
+    value=customer_data();
+    if(value==1)
     {
-       bill=bill-bill*0.05;
-       printf("The bill amount is : %d",bill);
+       s1.bill=s1.bill-s1.bill*0.05;
+       printf("The bill amount is : %d",s1.bill);
     }
     else
     {
-       printf("The bill amount is : %d",bill);
+       printf("The bill amount is : %d",s1.bill);
     }
 
 
