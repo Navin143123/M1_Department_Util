@@ -6,7 +6,7 @@ int customer_data();
 struct billing{
 float bill;
 char gender;
-int mobno;
+long long int mobno;
 }s1;
 int department_type(int dtypeno[],int n)
 {
@@ -295,11 +295,11 @@ int customer_data()
 int main()
 {
     int dtypeno[5],n,value;
-    char name,gender,valuedtype;
+    char name, valuedtype;
     printf("Please enter your name:\n");
-    scanf("%s",name);
-    printf("Please enter your name:\n");
-    scanf("%d",&s1.mobno);
+    scanf("%s\n",name);
+    printf("Please enter your mobile:\n");
+    scanf("%lld",&s1.mobno);
     printf("Please enter the gender(M/F/T):\n");
     scanf("%c",&s1.gender);
     printf("Please choose the departmentno where you like to buy:\n");
