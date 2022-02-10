@@ -313,11 +313,11 @@ int main()
     if(value==1)
     {
        s1.bill=s1.bill-s1.bill*0.05;
-       printf("The bill amount is : %f",s1.bill);
+       printf("The bill amount of %s is : %f",s1.name,s1.bill);
     }
     else
     {
-       printf("The bill amount is : %f",s1.bill);
+       printf("The bill amount of %s is : %f",s1.name,s1.bill);
     }
 
 
