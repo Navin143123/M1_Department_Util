@@ -5,8 +5,8 @@ int department_type(int dtypeno[],int n);
 int customer_data();
 struct billing{
 float bill;
-char gender,name;
-int mobno,fmobno,mmobno;
+char gender;
+int mobno;
 }s1;
 int department_type(int dtypeno[],int n)
 {
@@ -22,7 +22,7 @@ int department_type(int dtypeno[],int n)
             pant=600;
             trousers=250;
             inners=100;
-            printf("Enter 1-tshirt\n2-shirt\n3-pant\n4-trousers\n5-inners");
+            printf("Enter 1-tshirt\n2-shirt\n3-pant\n4-trousers\n5-inners\n");
             printf("Enter number of items you decided to buy\n");
             scanf("%d",&n1);
             int mcloth[n1],q[n1];
@@ -64,7 +64,7 @@ int department_type(int dtypeno[],int n)
             legin=400;
             roughdress=350;
             inners=150;
-            printf("Enter 1-chudidar\n2-saree\n3-legin\n4-roughdress\n5-inners");
+            printf("Enter 1-chudidar\n2-saree\n3-legin\n4-roughdress\n5-inners\n");
             printf("Enter number of items you decided to buy\n");
             scanf("%d",&n2);
             int fcloth[n2],q1[n2];
@@ -109,7 +109,7 @@ int department_type(int dtypeno[],int n)
             cream=70;
             gel=50;
             perfume=100;
-            printf("Enter 1-facewash\n2-powder\n3-cream\n4-gel\n5-perfume");
+            printf("Enter 1-facewash\n2-powder\n3-cream\n4-gel\n5-perfume\n");
             printf("Enter number of items you decided to buy\n");
             scanf("%d",&n3);
             int mcos[n3],q2[n3];
@@ -150,7 +150,7 @@ int department_type(int dtypeno[],int n)
             cream=110;
             lipstick=50;
             perfume=110;
-            printf("Enter 1-facewash\n2-powder\n3-cream\n4-lipstick\n5-perfume");
+            printf("Enter 1-facewash\n2-powder\n3-cream\n4-lipstick\n5-perfume\n");
             printf("Enter number of items you decided to buy\n");
             scanf("%d",&n4);
             int fcos[n4],q3[n4];
@@ -266,24 +266,28 @@ int department_type(int dtypeno[],int n)
 int customer_data()
 {
     if(s1.gender=='M'){
-    s1.mmobno={9748777348,7877598437,78998032110,9365668083,9748980976};
-    if(s1.mobno==s1.mmobno)
+    long long int mmobno[5]={9748777348,7877598437,78998032110,9365668083,9748980976};
+    for(int i=0;i<5;i++){
+    if(s1.mobno==mmobno[i])
     {
         return 1;
     }
     else{
         return 0;
+    }
     }
     }
     if(s1.gender=='F'||s1.gender=='T')
     {
-    s1.fmobno={9545554516,7885363457,9853487565,74358877220,9785673423};
-    if(s1.mobno==s1.fmobno)
+    long long int fmobno[5]={9545554516,7885363457,9853487565,74358877220,9785673423};
+    for(int i=0;i<5;i++){
+    if(s1.mobno==fmobno[i])
     {
         return 1;
     }
     else{
         return 0;
+    }
     }
     }
     
@@ -293,7 +297,7 @@ int main()
     int dtypeno[5],n,value;
     char name,gender,valuedtype;
     printf("Please enter your name:\n");
-    scanf("%s",s1.name);
+    scanf("%s",name);
     printf("Please enter your name:\n");
     scanf("%d",&s1.mobno);
     printf("Please enter the gender(M/F/T):\n");
@@ -309,11 +313,11 @@ int main()
     if(value==1)
     {
        s1.bill=s1.bill-s1.bill*0.05;
-       printf("The bill amount is : %d",s1.bill);
+       printf("The bill amount is : %f",s1.bill);
     }
     else
     {
-       printf("The bill amount is : %d",s1.bill);
+       printf("The bill amount is : %f",s1.bill);
     }
 
 
