@@ -1,14 +1,14 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-int department_type(int dtypeno[],int n);
+float department_type(int dtypeno[],int n);
 int customer_data();
 struct billing{
 float bill;
-char gender;
+char gender,name[50];
 long long int mobno;
 }s1;
-int department_type(int dtypeno[],int n)
+float department_type(int dtypeno[],int n)
 {
     for(int i=0;i<n;i++){
     if(dtypeno[i]==1)
@@ -22,15 +22,15 @@ int department_type(int dtypeno[],int n)
             pant=600;
             trousers=250;
             inners=100;
-            printf("Enter 1-tshirt\n2-shirt\n3-pant\n4-trousers\n5-inners\n");
-            printf("Enter number of items you decided to buy\n");
+            printf("\nEnter 1-tshirt\n2-shirt\n3-pant\n4-trousers\n5-inners");
+            printf("Enter number of items you decided to buy:");
             scanf("%d",&n1);
             int mcloth[n1],q[n1];
             for(int i=0;i<n1;i++)
             {
-                printf("Please choose the itemno of which item you like to buy\n");
-                scanf("%d\n",&mcloth[i]);
-                printf("Enter the quantity for item:\n");
+                printf("Please choose the itemno of which item you like to buy:");
+                scanf("%d",&mcloth[i]);
+                printf("Enter the quantity for item:");
                 scanf("%d\n",&q[i]);
                 if(mcloth[i]==1)
                 {
@@ -64,16 +64,16 @@ int department_type(int dtypeno[],int n)
             legin=400;
             roughdress=350;
             inners=150;
-            printf("Enter 1-chudidar\n2-saree\n3-legin\n4-roughdress\n5-inners\n");
-            printf("Enter number of items you decided to buy\n");
+            printf("\nEnter 1-chudidar\n2-saree\n3-legin\n4-roughdress\n5-inners");
+            printf("Enter number of items you decided to buy:");
             scanf("%d",&n2);
             int fcloth[n2],q1[n2];
             for(int i=0;i<n2;i++)
             {
-                printf("Please choose the itemno of which item you like to buy\n");
-                scanf("%d\n",&fcloth[i]);
-                printf("Enter the quantity for item:\n");
-                scanf("%d\n",&q1[i]);
+                printf("Please choose the itemno of which item you like to buy:");
+                scanf("%d",&fcloth[i]);
+                printf("Enter the quantity for item:");
+                scanf("%d",&q1[i]);
                 if(fcloth[i]==1)
                 {
                     s1.bill=s1.bill+chudidar*q1[i];
@@ -109,16 +109,16 @@ int department_type(int dtypeno[],int n)
             cream=70;
             gel=50;
             perfume=100;
-            printf("Enter 1-facewash\n2-powder\n3-cream\n4-gel\n5-perfume\n");
-            printf("Enter number of items you decided to buy\n");
+            printf("\nEnter 1-facewash\n2-powder\n3-cream\n4-gel\n5-perfume");
+            printf("Enter number of items you decided to buy:");
             scanf("%d",&n3);
             int mcos[n3],q2[n3];
             for(int i=0;i<n3;i++)
             {
-                printf("Please choose the itemno of which item you like to buy\n");
-                scanf("%d\n",&mcos[i]);
-                printf("Enter the quantity for item:\n");
-                scanf("%d\n",&q2[i]);
+                printf("Please choose the itemno of which item you like to buy:");
+                scanf("%d",&mcos[i]);
+                printf("Enter the quantity for item:");
+                scanf("%d",&q2[i]);
                 if(mcos[i]==1)
                 {
                     s1.bill=s1.bill+facewash*q2[i];
@@ -150,16 +150,16 @@ int department_type(int dtypeno[],int n)
             cream=110;
             lipstick=50;
             perfume=110;
-            printf("Enter 1-facewash\n2-powder\n3-cream\n4-lipstick\n5-perfume\n");
-            printf("Enter number of items you decided to buy\n");
+            printf("\nEnter 1-facewash\n2-powder\n3-cream\n4-lipstick\n5-perfume");
+            printf("Enter number of items you decided to buy:");
             scanf("%d",&n4);
             int fcos[n4],q3[n4];
             for(int i=0;i<n4;i++)
             {
                 printf("Please choose the itemno of which item you like to buy\n");
-                scanf("%d\n",&fcos[i]);
+                scanf("%d",&fcos[i]);
                 printf("Enter the quantity for item:\n");
-                scanf("%d\n",&q3[i]);
+                scanf("%d",&q3[i]);
                 if(fcos[i]==1)
                 {
                     s1.bill=s1.bill+facewash*q3[i];
@@ -191,16 +191,16 @@ int department_type(int dtypeno[],int n)
         books=150;
         sports=400;
         electronics=250;
-        printf("Enter 1-toys\n2-books\n3-sports\n4-electronics\n");
-            printf("Enter number of items you decided to buy\n");
+        printf("\nEnter 1-toys\n2-books\n3-sports\n4-electronics");
+            printf("Enter number of items you decided to buy:");
             scanf("%d",&n5);
             int happ[n5],q4[n5];
             for(int i=0;i<n5;i++)
             {
-                printf("Please choose the itemno of which item you like to buy\n");
-                scanf("%d\n",&happ[i]);
+                printf("Please choose the itemno of which item you like to buy:");
+                scanf("%d",&happ[i]);
                 printf("Enter the quantity for item:\n");
-                scanf("%d\n",&q4[i]);
+                scanf("%d",&q4[i]);
                 if(happ[i]==1)
                 {
                    s1.bill=s1.bill+toys*q4[i];
@@ -227,16 +227,16 @@ int department_type(int dtypeno[],int n)
         salt=30;
         rice=50;
         dhal=60;
-        printf("Enter 1-sugar\n2-rice\n3-dhal\n4-salt\n5-oil");
-            printf("Enter number of items you decided to buy\n");
+        printf("\nEnter 1-sugar\n2-rice\n3-dhal\n4-salt\n5-oil");
+            printf("Enter number of items you decided to buy:");
             scanf("%d",&n6);
             int grcy[n6],q5[n6];
             for(int i=0;i<n6;i++)
             {
-                printf("Please choose the itemno of which item you like to buy\n");
-                scanf("%d\n",&grcy[i]);
-                printf("Enter the quantity for item:\n");
-                scanf("%d\n",&q5[i]);
+                printf("Please choose the itemno of which item you like to buy:");
+                scanf("%d",&grcy[i]);
+                printf("Enter the quantity for item:");
+                scanf("%d",&q5[i]);
                 if(grcy[i]==1)
                 {
                     s1.bill=s1.bill+sugar*q5[i];
@@ -295,16 +295,16 @@ int customer_data()
 int main()
 {
     int dtypeno[5],n,value;
-    char name, valuedtype;
-    printf("Please enter your name:\n");
-    scanf("%s\n",name);
-    printf("Please enter your mobile:\n");
+    char valuedtype;
+    printf("Please enter your name:");
+    scanf("%s",s1.name);
+    printf("Please enter your mobile:");
     scanf("%lld",&s1.mobno);
-    printf("Please enter the gender(M/F/T):\n");
-    scanf("%c",&s1.gender);
-    printf("Please choose the departmentno where you like to buy:\n");
+    printf("Please enter the gender(M/F/T):");
+    scanf("%s",&s1.gender);
+    printf("Please choose the departmentno where you like to buy:");
     printf("1-clothing\n2-cosmetics\n3-homeapp\n4-grocery\n");
-    printf("Enter how many departments you are going to buy\n");
+    printf("Enter how many departments you are going to buy:");
     scanf("%d",&n);
     for(int i=0;i<n;i++){
     scanf("%d",&dtypeno[i]);}
