@@ -6,4 +6,4 @@
 
 https://api.codiga.io/project/31004/score/svg
 
-https://api.codiga.io/project/31004/score/svg
+https://api.codiga.io/project/31004/status/svg
