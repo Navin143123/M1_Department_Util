@@ -230,13 +230,14 @@ float department_type(int dtypeno[],int n)
         printf("\nEnter 1-sugar\n2-rice\n3-dhal\n4-salt\n5-oil");
             printf("Enter number of items you decided to buy:");
             scanf("%d",&n6);
-            int grcy[n6],q5[n6];
+            int grcy[n6];
+            float q5[n6];
             for(int i=0;i<n6;i++)
             {
                 printf("Please choose the itemno of which item you like to buy:");
                 scanf("%d",&grcy[i]);
                 printf("Enter the quantity for item:");
-                scanf("%d",&q5[i]);
+                scanf("%f",&q5[i]);
                 if(grcy[i]==1)
                 {
                     s1.bill=s1.bill+sugar*q5[i];
