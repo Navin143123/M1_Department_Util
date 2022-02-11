@@ -9,4 +9,4 @@
 [![Code Grade](https://api.codiga.io/project/31004/score/svg)](https://www.codiga.io)
 
 [![Code Grade](https://api.codiga.io/project/31004/status/svg)](https://www.codiga.io)
-.github/workflows/staticcheck.yml
+
