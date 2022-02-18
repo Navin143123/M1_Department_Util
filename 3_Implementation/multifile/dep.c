@@ -1,4 +1,3 @@
-#include"department.h"
 #include"main.c"
 float department_type(int dtypeno[],int n)
 {
