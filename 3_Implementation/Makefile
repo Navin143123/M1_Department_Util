@@ -4,7 +4,7 @@ SRC= test_dep.c\
 multifile/dep.c\
 multifile/main.c
 
-OBJ=SRC= test_dep.o\
+OBJ=test_dep.o\
 dep.o\
 main.o
 
